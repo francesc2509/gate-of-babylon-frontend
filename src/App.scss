@@ -1,0 +1,43 @@
+@import './shared/styles.scss';
+
+* {
+  margin: 0;
+}
+
+.material-icons-round.md-18 { font-size: 18px; }
+.material-icons-round.md-24 { font-size: 24px; }
+.material-icons-round.md-36 { font-size: 36px; }
+.material-icons-round.md-48 { font-size: 48px; }
+
+.App {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.App-header {
+  background: #000;
+  color: #fff;
+  height: 5em;
+}
+
+.App-main {
+  overflow: auto;
+  flex: 1
+}
+
+.App-nav {
+  height: 5%;
+}
+
+.App-nav-mobile {
+  height: $nav-mobile-height;
+}
+
+@media(max-width: 768px) {
+  .App-header {
+    height: 4em;
+  }
+}
