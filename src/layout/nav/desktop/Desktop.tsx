@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import { routes } from '../../../shared/routes';
 import { NavItem } from './components';
 
-import './Desktop.css'
+import './Desktop.scss'
 
 const Desktop: React.FunctionComponent<{ children?: ReactNode }> = (props) => {
     const navItems = routes.map(route => {

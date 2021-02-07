@@ -8,7 +8,7 @@ const Home: React.FunctionComponent<{children?: React.ReactNode}> = (props) => {
         <div className="Home">
             <section>
                 <header>
-                    <img src={profile} alt="profile-picture"></img>
+                    <img src={profile} alt="profile"></img>
                     <h2>Francesc Manarel Bueno</h2>
                 </header>
                 <div className="content">

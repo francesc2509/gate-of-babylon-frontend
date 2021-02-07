@@ -1,40 +1,42 @@
 import React from 'react';
 
+import { SocialItem } from './components';
+
 import './Social.scss'
 
 const Social: React.FunctionComponent<{}> = (props) => {
+    const socialItems = [
+        {
+            name: 'github',
+            url: 'https://github.com/francesc2509'
+        },
+        {
+            name: 'instagram',
+            url: 'https://www.instagram.com/'
+        },
+        {
+            name: 'kakaotalk',
+            url: 'https://www.kakaocorp.com/service/KakaoTalk?lang=en'
+        },
+        {
+            name: 'linkedin',
+            url: 'https://www.linkedin.com/in/francesc2509/'
+        },
+        {
+            name: 'youtube',
+            url: 'https://www.youtube.com/?feature=youtu.be'
+        }
+    ].map((item) => {
+        const { name, url } = item;
+
+        return (
+            <SocialItem name={name} url={url} key={name}/>
+        );
+    })
+
     return (
         <div className="Social">
-            <article className="github">
-                <a href="#">
-                    <span className="link-label">GitHub</span>
-                    <i className="fab fa-github"></i>
-                </a>
-            </article>
-            <article className="instagram">
-                <a href="#">
-                    <span className="link-label">Instagram</span>
-                    <i className="fab fa-instagram"></i>
-                </a>
-            </article>
-            <article className="kakao">
-                <a href="#">
-                    <span className="link-label">Kakao TALK</span>
-                    <i className="fab fa-kakaotalk"></i>
-                </a>
-            </article>
-            <article className="linkedin">
-                <a href="#">
-                    <span className="link-label">Linkedin</span>
-                    <i className="fab fa-linkedin"></i>
-                </a>
-            </article>
-            <article className="youtube">
-                <a href="#" >
-                    <span className="link-label">Youtube</span>
-                    <i className="fab fa-youtube"></i>
-                </a>
-            </article>
+           {socialItems}
         </div>
     );
 };

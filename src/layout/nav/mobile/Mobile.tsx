@@ -3,7 +3,7 @@ import { routes } from '../../../shared/routes';
 import { NavItem } from './components';
 
 
-import './Mobile.css'
+import './Mobile.scss'
 
 const Mobile: React.FunctionComponent<{ children?: React.ReactNode }> = () => {
     const navItems = routes.map((route) => {
@@ -15,7 +15,7 @@ const Mobile: React.FunctionComponent<{ children?: React.ReactNode }> = () => {
     });
 
     return (
-        <ul>
+        <ul className="Nav-mobile">
             {navItems}
         </ul>
     );

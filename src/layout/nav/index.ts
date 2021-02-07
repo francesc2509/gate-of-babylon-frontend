@@ -1,7 +1,9 @@
 import Desktop from './desktop';
 import Mobile from './mobile';
 
-export default {
+const mod = {
     Desktop,
     Mobile,
 }
+
+export default mod;

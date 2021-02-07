@@ -15,29 +15,37 @@
   flex-direction: column;
   height: 100%;
   width: 100%;
-}
 
-.App-header {
-  background: #000;
-  color: #fff;
-  height: 5em;
-}
+  .Header-wrapper {
+    background: #000;
+    color: #fff;
+    transition: height 0.3s ease-in;
+    height: 5em;
 
-.App-main {
-  overflow: auto;
-  flex: 1
-}
-
-.App-nav {
-  height: 5%;
-}
-
-.App-nav-mobile {
-  height: $nav-mobile-height;
-}
-
-@media(max-width: 768px) {
-  .App-header {
-    height: 4em;
+    &.hidden {
+      height: 0em;
+    }
+  }
+  
+  .Main-wrapper {
+    overflow: auto;
+    flex: 1
+  }
+  
+  .Nav-wrapper  {
+    box-sizing: border-box;
+    min-height: 5%;
+    padding: 0.5em 0;
+  }
+  
+  .Nav-mobile-wrapper {
+    height: $nav-mobile-height;
+  }
+  
+  @media(max-width: 1024px) {
+    .Header-wrapper {
+      height: 4em;
+    }
   }
 }
+

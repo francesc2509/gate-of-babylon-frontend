@@ -5,29 +5,44 @@ import './App.scss';
 import { Header, Main, Nav } from './layout';
 import Hooks from './shared/hooks'
 
-function App() {
+const App: React.FunctionComponent = () => {
   const isMobile = Hooks.useIsMobile();
+  const { isScrolled, setIsScrolled } = Hooks.useIsScrolled();
+  console.log(isMobile);
+  
+  let navDesktop: JSX.Element|null = <Nav.Desktop />;
+  let navMobile: JSX.Element|null = null;
+  let hideHeader = '';
+  if (isMobile) {
+    hideHeader = isScrolled ? 'hidden': hideHeader;
+    navDesktop = null;
+    navMobile = <Nav.Mobile />
+  }
+
+  console.log(navDesktop);
+  console.log(navMobile);
 
   return (
     <Router>
       <div className="App">
-        <div className="App-header">
+        <div className={`Header-wrapper ${hideHeader}`}>
           <Header />
         </div>
         {
-          !isMobile &&
-          <div className="App-nav">
-            <Nav.Desktop />
+          navDesktop &&
+          <div className="Nav-wrapper">
+            {navDesktop}
           </div>
         }
-        <div className="App-main">
+        <div className="Main-wrapper" onScroll={setIsScrolled}>
           <Main />
         </div>
         {
-          isMobile &&
-          <div className="App-nav-mobile">
-            <Nav.Mobile />
-          </div>}
+          navMobile &&
+          <div className="Nav-mobile-wrapper">
+            {navMobile}
+          </div>
+        }
       </div>
     </Router>
   );

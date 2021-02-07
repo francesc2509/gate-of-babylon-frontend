@@ -1,5 +1,9 @@
 import useIsMobile from './useIsMobile';
+import useIsScrolled from './useIsScrolled';
 
-export default {
-    useIsMobile
+const mod = {
+    useIsMobile,
+    useIsScrolled
 };
+
+export default mod;

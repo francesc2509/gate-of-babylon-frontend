@@ -10,7 +10,7 @@ const useIsMobile = () => {
       // Handler to call on window resize
       function handleResize() {
         // Set window width/height to state
-        setIsMobile(window.innerWidth <  768);
+        setIsMobile(window.innerWidth < 640);
       }
       
       // Add event listener

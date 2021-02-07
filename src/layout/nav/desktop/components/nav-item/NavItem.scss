@@ -1,0 +1,30 @@
+@import '../../../../../shared/styles.scss';
+
+.Nav-item-desktop {
+    display: flex;
+    height: 4em;
+    list-style: none;
+    margin: 0 0 0 0.5em;
+    width: 8em;
+    
+    a {
+        align-items: center;
+        background: $primary;
+        border-radius: 2em;
+        box-shadow: 1px 1px rgba($color: $primary-dark, $alpha: 0.5);
+        color: $primary-contrast;
+        display: flex;
+        font-weight: bold;
+        height: 100%;
+        justify-content: center;
+        text-decoration: none;
+        width: 100%;
+    }
+
+    .active {
+        background: $secondary;
+        color: $secondary-contrast;
+        box-shadow: 1px 1px rgba($color: $secondary-dark, $alpha: 0.5);
+    }
+
+}
