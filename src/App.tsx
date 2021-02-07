@@ -8,7 +8,6 @@ import Hooks from './shared/hooks'
 const App: React.FunctionComponent = () => {
   const isMobile = Hooks.useIsMobile();
   const { isScrolled, setIsScrolled } = Hooks.useIsScrolled();
-  console.log(isMobile);
   
   let navDesktop: JSX.Element|null = <Nav.Desktop />;
   let navMobile: JSX.Element|null = null;
@@ -18,10 +17,7 @@ const App: React.FunctionComponent = () => {
     navDesktop = null;
     navMobile = <Nav.Mobile />
   }
-
-  console.log(navDesktop);
-  console.log(navMobile);
-
+  
   return (
     <Router>
       <div className="App">
