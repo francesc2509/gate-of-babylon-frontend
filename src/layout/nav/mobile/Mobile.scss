@@ -1,6 +1,8 @@
+@import '../../../shared/styles.scss';
+
 ul.Nav-mobile {
-    background: black;
-    color: white;
+    background: $primary-dark;
+    color: $primary-contrast;
     display: flex;
     flex: 1;
     height: 100%;

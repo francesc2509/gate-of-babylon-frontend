@@ -10,7 +10,7 @@
     a {
         align-items: center;
         background: $primary;
-        border-radius: 2em;
+        border-radius: 1em;
         box-shadow: 1px 1px rgba($color: $primary-dark, $alpha: 0.5);
         color: $primary-contrast;
         display: flex;
@@ -19,12 +19,17 @@
         justify-content: center;
         text-decoration: none;
         width: 100%;
+
+        &:not(.active):hover {
+            background: $primary-dark;
+        }
     }
 
     .active {
-        background: $secondary;
-        color: $secondary-contrast;
+        background: $secondary-light;
         box-shadow: 1px 1px rgba($color: $secondary-dark, $alpha: 0.5);
+        color: $secondary-contrast;
+        cursor: default;
     }
 
 }
