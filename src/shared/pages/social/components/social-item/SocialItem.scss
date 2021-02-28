@@ -1,65 +1,19 @@
+@import "../../../../styles.scss";
+
 article.Social-item {
     border-radius: 2rem;
     box-sizing: border-box;
-    color: white;
     margin: 1em 0;
     height: 10%;
     width: 100%;
 
-    &.github {
-        background: black;
-
-        a:hover {
-            background: rgba(100, 100, 100, 0.5);
-            animation: link-hover-github 0.5s ease-in;
-        }
-
-        @keyframes link-hover-github {
-            0% {
-                background: rgba(100, 100, 100, 0);
-            }
-
-            25% {
-                background: rgba(100, 100, 100, 0.125);
-            }
-
-            50% {
-                background: rgba(100, 100, 100, 0.25);
-            }
-
-            75% {
-                background: rgba(100, 100, 100, 0.375);
-            }
-
-            100% {
-                background: rgba(100, 100, 100, 0.5);
-            }
-        }
-    }
-
-    &.instagram {
-        background: linear-gradient(15deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
-    }
-
-    &.kakaotalk {
-        background: rgba(255,238,51,0.99);
-        color: #3b1e1e;
-    }
-    
-    &.linkedin {
-        background: rgb(10, 102, 194);
-    }
-    
-    &.youtube {
-        background: #ff0000;
-    }
-
     a {
         align-items: center;
+        background: $secondary-light;
         border-radius: 2rem;
         box-shadow: 1px 1px rgba($color: #000000, $alpha: 0.20);
         box-sizing: border-box;
-        color: inherit;
+        color: $primary;
         display: flex;
         font-size: 1.75em;
         font-weight: bold;
@@ -83,29 +37,28 @@ article.Social-item {
     }
 
     a:hover {
-        background:  rgba($color: #000000, $alpha: 0.5);
-        animation: link-hover 0.5s ease-in;
+        background:  rgba($color: $secondary, $alpha: 0.5);
     }
 
     @keyframes link-hover {
         0% {
-            background: rgba($color: #000000, $alpha: 0);
+            background: rgba($color: $secondary, $alpha: 0);
         }
 
         25% {
-            background: rgba($color: #000000, $alpha: 0.125);
+            background: rgba($color: $secondary, $alpha: 0.125);
         }
 
         50% {
-            background: rgba($color: #000000, $alpha: 0.25);
+            background: rgba($color: $secondary, $alpha: 0.25);
         }
 
         75% {
-            background: rgba($color: #000000, $alpha: 0.375);
+            background: rgba($color: $secondary, $alpha: 0.375);
         }
 
         100% {
-            background: rgba($color: #000000, $alpha: 0.5);
+            background: rgba($color: $secondary, $alpha: 0.5);
         }
     }
 

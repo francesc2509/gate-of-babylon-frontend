@@ -1,0 +1,27 @@
+@import "../../../../styles.scss";
+
+.Tech-Stack-item {
+    background: #000;
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .img-wrapper {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        flex: 1;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .content {
+        box-sizing: border-box;
+        background: rgba($color:  $primary-contrast, $alpha: 0.90);
+        display: block;
+        padding: 1em;
+    }
+}

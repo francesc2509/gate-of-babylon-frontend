@@ -21,7 +21,7 @@
         width: 100%;
 
         &:not(.active):hover {
-            background: $primary-dark;
+            background: rgba($color: $primary, $alpha: 0.5);
         }
     }
 

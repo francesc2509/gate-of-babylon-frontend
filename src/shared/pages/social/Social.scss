@@ -9,10 +9,4 @@
     overflow: auto;
     padding: 2em;
     width: 100%;
-
-    @media(min-width: 1024px) {
-        & {
-            justify-content: flex-start;
-        }
-    }
 }

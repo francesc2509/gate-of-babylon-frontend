@@ -1,0 +1,23 @@
+.TechStack {
+    box-sizing: border-box;
+    min-height: 100%;
+    height: 100%;
+    justify-content: center;
+    padding: 1em;
+    display: grid;
+    gap: 6em;
+    grid-template-columns: 100%;
+    grid-auto-rows: 25em;
+
+    @media(min-width: 768px) {
+        display: grid;
+        gap: 1em;
+        grid-template-columns: 15em 15em 15em;
+        grid-auto-rows: 25em;
+    }
+
+    @media(min-width: 1440px) {
+        grid-template-columns: 30em 30em 30em;
+        grid-auto-rows: 50em;
+    }
+}

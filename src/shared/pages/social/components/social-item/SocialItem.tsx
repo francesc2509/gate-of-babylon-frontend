@@ -12,8 +12,8 @@ const SocialItem: React.FunctionComponent<SocialItemProps> = (props) => {
     const { name, label, url } = props;
 
     return (
-        <article className={`Social-item ${name}`}>
-            <a href={url}>
+        <article className="Social-item">
+            <a href={url} target="_blank">
                 {/* <span className="link-label">GitHub</span> */}
                 <i className={`fab fa-${name}`}></i>
             </a>
